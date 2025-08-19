@@ -9,6 +9,8 @@ import {
   FlatList
 } from 'react-native';
 import { useState } from 'react';
+import { StatusBar } from 'expo-status-bar';
+
 import GoalInput from './components/GoalInput';
 import GoalItem from './components/GoalItem';
 
@@ -46,12 +48,14 @@ export default function App() {
   }
 
   return (
+    <>
+    <StatusBar style="light" />
     <View style={styles.appContainer}>
 
       {/* modal button */}
       <Button 
         title='Add New Goal' 
-        color="#5e0acc" 
+        color="#a065ec" 
         onPress={startAddGoalHandler}
       />
 
@@ -84,6 +88,7 @@ export default function App() {
         />
       </View>
     </View>
+    </>
   );
 }
 
